@@ -1,5 +1,8 @@
-.container {
+body{
 
+}
+.container {
+  background-color:#f4f9ff;
 font-family: 'Oswald', sans-serif;
   text-align: center;
 }
@@ -24,8 +27,8 @@ font-family: 'Oswald', sans-serif;
 
 .col-md-4{
   margin: 10px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -38,4 +41,23 @@ font-family: 'Oswald', sans-serif;
     margin: auto;
     height: auto;
     width: auto;
+}
+
+figure img:hover{
+  -webkit-transition: all .3s;
+-moz-transition: all .3s;
+-o-transition: all .3s;
+    transform: scale(1.05);
+    cursor: pointer; cursor: hand;
+}
+
+.description {
+  background: rgba(255,255,255,0.7);
+  padding: 10px 16px;
+  color: black;
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  left: 0px;
+  width: 100%;
 }
