@@ -1,0 +1,41 @@
+.container {
+
+font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+#header{
+
+  padding:50px;
+  background-image: url("../img/header.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#header h1{
+  font-size: 700%;
+}
+#header h3{
+  font-size: 300%;
+}
+.centered {
+   display: inline-block;
+}
+
+.col-md-4{
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bgImage{
+  position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    height: auto;
+    width: auto;
+}
