@@ -11,7 +11,6 @@ font-family: 'Oswald', sans-serif;
 }
 
 #header{
-
   padding:50px;
   background-image: url("../img/header.jpg");
   background-position: center;
@@ -33,6 +32,7 @@ font-family: 'Oswald', sans-serif;
   width: 250px;
   height: 250px;
   overflow: hidden;
+  border: 5px solid #e5ca8b;
 }
 
 .bgImage{
@@ -56,11 +56,19 @@ figure img:hover{
 
 .description {
   background: rgba(255,255,255,0.7);
-  padding: 10px 16px;
+  padding: 10px;
   color: black;
   position: absolute;
   bottom: 0px;
   margin: 0px;
   left: 0px;
   width: 100%;
+  font-size: 150%;
+}
+
+form button {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 300%;
 }

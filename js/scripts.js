@@ -10,28 +10,27 @@ function checkValues(){
   for (var i = 1; i <= 5; i++) { // go through the 5 questions
 
     if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'hawaii'){ //if the checked box's
-      hawaiiPoints++;
-    } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'egypt'){
-      egyptPoints++;
-    } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'texas'){
-      texasPoints++;
-    } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'disneyworld'){
-      disneyworldPoints++;
-    } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'antarctica') {
-      antarcticaPoints++;
-    } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'home') {
-      homePoints++;
-    } else{
+    hawaiiPoints++;
+  } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'egypt'){
+    egyptPoints++;
+  } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'texas'){
+    texasPoints++;
+  } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'disneyworld'){
+    disneyworldPoints++;
+  } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'antarctica') {
+    antarcticaPoints++;
+  } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'home') {
+    homePoints++;
+  } else{
     //  alert('checked box for ' + 'question'+i+' has no value or question' + i + ' is not found')
-    }
   }
+}
 }
 
 $(function(){ //document is ready
+  $('input').prop("checked", false) //uncheck all boxes on load
 
-//create point variables to "score" user's choices
-
-
+  //create point variables to "score" user's choices
   $('#question1 figure').click(function(){
     $('input',this).prop("checked", true)
   });
@@ -48,9 +47,9 @@ $(function(){ //document is ready
     $('input',this).prop("checked", true)
   });
 
-  if $('')
-
-
+  $('.col-md-4').mouseLeave(function(){
+      this.style.borderColor='#e5ca8b';
+  });
 
   $('form#quiz').submit(function(event){
     //reset scores
@@ -65,8 +64,8 @@ $(function(){ //document is ready
     checkValues(); // call function to check which values are "checked" by user and add points accordingly
     $('.result').slideDown("slow");
     $("html, body").animate({ scrollTop: $(document).height() }, 1000);
-  //   alert('hawaii: ' + hawaiiPoints + ' egypt: ' + egyptPoints + ' texas: ' + texasPoints + ' disneyworld: ' +
-  // disneyworldPoints + ' antarctica: ' + antarcticaPoints + ' home:' + homePoints);
+    //   alert('hawaii: ' + hawaiiPoints + ' egypt: ' + egyptPoints + ' texas: ' + texasPoints + ' disneyworld: ' +
+    // disneyworldPoints + ' antarctica: ' + antarcticaPoints + ' home:' + homePoints);
   });
 
 });
