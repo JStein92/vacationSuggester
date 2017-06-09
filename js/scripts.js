@@ -22,7 +22,7 @@ function checkValues(){
     } else if ( $("input[name='question"+ i +"'"+"]:checked").val() == 'home') {
       homePoints++;
     } else{
-      alert('checked box for ' + 'question'+i+' has no value or question' + i + ' is not found')
+    //  alert('checked box for ' + 'question'+i+' has no value or question' + i + ' is not found')
     }
   }
 }
@@ -48,7 +48,7 @@ $(function(){ //document is ready
     $('input',this).prop("checked", true)
   });
 
-
+  if $('')
 
 
 
@@ -63,9 +63,10 @@ $(function(){ //document is ready
 
     event.preventDefault();
     checkValues(); // call function to check which values are "checked" by user and add points accordingly
-
-    alert('hawaii: ' + hawaiiPoints + ' egypt: ' + egyptPoints + ' texas: ' + texasPoints + ' disneyworld: ' +
-  disneyworldPoints + ' antarctica: ' + antarcticaPoints + ' home:' + homePoints);
+    $('.result').slideDown("slow");
+    $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+  //   alert('hawaii: ' + hawaiiPoints + ' egypt: ' + egyptPoints + ' texas: ' + texasPoints + ' disneyworld: ' +
+  // disneyworldPoints + ' antarctica: ' + antarcticaPoints + ' home:' + homePoints);
   });
 
 });

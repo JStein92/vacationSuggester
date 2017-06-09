@@ -1,6 +1,9 @@
 body{
 
 }
+.result {
+  display: none;
+}
 .container {
   background-color:#f4f9ff;
 font-family: 'Oswald', sans-serif;
