@@ -47,8 +47,14 @@ $(function(){ //document is ready
     $('input',this).prop("checked", true)
   });
 
-  $('.col-md-4').mouseLeave(function(){
-      this.style.borderColor='#e5ca8b';
+
+  $('.col-md-4').hover(function(){
+    this.style.borderColor="#70a6ff";
+    //  this.style.borderColor='black';
+  });
+  $('.col-md-4').mouseleave(function(){
+    this.style.borderColor="#a3c6ff";
+    //  this.style.borderColor='black';
   });
 
   $('form#quiz').submit(function(event){
