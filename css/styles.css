@@ -8,17 +8,13 @@ body{
   display: none;
 }
 .container {
-
-background: linear-gradient(#fff3ea,#f4f9ff );
-
+  background: linear-gradient(#fff3ea,#f4f9ff );
 }
 .questionHeader{
   margin-top: 10px;
   margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 20px;
-
-
   background-color: #d1e1fc;
 }
 
@@ -27,8 +23,6 @@ background: linear-gradient(#fff3ea,#f4f9ff );
   background-image: url("../img/header.jpg");
   background-position: center;
   background-size:cover;
-
-
 }
 
 #header h1{
@@ -56,8 +50,7 @@ background: linear-gradient(#fff3ea,#f4f9ff );
     top: -100%;
     bottom: -100%;
     margin: auto;
-    height: auto;
-    width: auto;
+    height: 100%;
 }
 
 figure img:hover{
@@ -85,6 +78,10 @@ padding: 10px;
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 300%;
+}
+
+input {
+ transform: scale(1.2);
 }
 
 .result{
