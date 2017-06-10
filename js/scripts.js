@@ -13,7 +13,7 @@ var texasPoints = {
 }
 var disneyworldPoints = {
   score: 0,
-  name:'disney world'
+  name:'disneyworld'
 }
 var antarcticaPoints = {
   score:0,
