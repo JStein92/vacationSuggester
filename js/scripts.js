@@ -24,8 +24,8 @@ var homePoints = {
   name:'home'
 }
 
-function checkValues(){
-  for (var i = 1; i <= 5; i++) { // go through the 5 questions
+function checkValues(){ // go through the 5 questions and check which value is checked by user, then add appropriate point
+  for (var i = 1; i <= 5; i++) {
 
     if ( $("input[name='question"+ i +"'"+"]:checked").val() === 'hawaii'){ //if the checked box's
     hawaiiPoints.score++;
@@ -84,6 +84,13 @@ $(function(){ //document is ready
     antarcticaPoints.score = 0;
     homePoints.score = 0;
 
+    $('#hawaiiResult').hide();
+    $('#egyptResult').hide();
+    $('#texasResult').hide();
+    $('#disneyworldResult').hide();
+    $('#antarcticaResult').hide();
+    $('#homeResult').hide();
+
     checkValues();     // call function to check which values are "checked" by user and add points accordingly
 
     //check to make sure max points are reached (I'm sure there's a better way)
@@ -103,10 +110,20 @@ $(function(){ //document is ready
         for (var i = 0; i < scoreArray.length; i++) {
           if (scoreArray[i].score === finalDestination){
             destinationString += (scoreArray[i].name.toUpperCase() + " or ");
+            $('#'+ (scoreArray[i].name.toString() + 'Result')).show();
           }
+
         }
         //remove the extra " or "
         destinationString = destinationString.toString().substring(0, destinationString.length-4)
+
+        //get name but only display if it's not NULL
+        var nameString = $('#nameInput').val();
+        if(nameString){
+          $('#userName').text(nameString + ', you')
+        }else {
+          $('#userName').text('You')
+        }
 
         $('#destination').text(destinationString); //add destination string to ID
         $('.result').slideDown("slow"); // show results
@@ -114,5 +131,5 @@ $(function(){ //document is ready
       }
 
     });
-    
+
   });
